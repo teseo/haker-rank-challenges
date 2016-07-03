@@ -11,10 +11,19 @@ gulp.task('clear', function () {
 require('./gulp-tasks/matrix-difference')(gulp, plugins);
 require('./gulp-tasks/watch-matrix-difference')(gulp);
 
+//Plus minus challenge tasks
+require('./gulp-tasks/plus-minus')(gulp, plugins);
+require('./gulp-tasks/watch-plus-minus')(gulp);
+
 gulp.task('matrix-difference', [
     'clear',
     'suite-matrix-difference',
     'watch-suite-matrix-difference']);
 
+gulp.task('plus-minus', [
+    'clear',
+    'suite-plus-minus',
+    'watch-suite-plus-minus']);
+
 // default task: clear screen, run test suites
-gulp.task('default', ['matrix-difference']);
+gulp.task('default', ['matrix-difference', 'plus-minus']);

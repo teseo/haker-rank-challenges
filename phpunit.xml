@@ -11,8 +11,11 @@
          syntaxCheck="false"
 >
     <testsuites>
-        <testsuite name="Package Test Suite">
-            <directory>tests</directory>
+        <testsuite name="MatrixDifference">
+            <directory>tests/MatrixDifferenceTest</directory>
+        </testsuite>
+        <testsuite name="PlusMinus">
+            <directory>tests/PlusMinusTest</directory>
         </testsuite>
     </testsuites>
 </phpunit>
