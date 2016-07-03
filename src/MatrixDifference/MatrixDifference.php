@@ -1,9 +1,6 @@
 <?php
 namespace MatrixDifference;
-/**
- * Class MatrixDifference
- * @package MatrixDifference
- */
+
 /**
  * Class MatrixDifference
  * @package MatrixDifference
