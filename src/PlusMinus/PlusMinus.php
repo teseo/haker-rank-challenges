@@ -57,7 +57,7 @@ class PlusMinus
     {
         $result = '';
 
-        if($this->positiveNumbers > 0)
+        if ($this->positiveNumbers > 0)
         {
             $result.= $this->formatPositiveNumbers() . PHP_EOL;
         }
@@ -66,7 +66,7 @@ class PlusMinus
             $result.= $this->pritEmptyDefaultValue() . PHP_EOL;
         }
 
-        if($this->negativeNumbers > 0)
+        if ($this->negativeNumbers > 0)
         {
             $result.= $this->formatNegativeNumbers() . PHP_EOL;
         }
@@ -75,7 +75,7 @@ class PlusMinus
             $result.= $this->pritEmptyDefaultValue() . PHP_EOL;
         }
 
-        if($this->zeroNumbers > 0)
+        if ($this->zeroNumbers > 0)
         {
             $result.= $this->formatZeroNumbers();
         }
