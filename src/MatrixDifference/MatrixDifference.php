@@ -1,13 +1,31 @@
 <?php
 namespace MatrixDifference;
-
-
+/**
+ * Class MatrixDifference
+ * @package MatrixDifference
+ */
 /**
  * Class MatrixDifference
  * @package MatrixDifference
  */
 class MatrixDifference
 {
+    /**
+     * @var int
+     */
+    private $leftSum      = 0;
+    /**
+     * @var int
+     */
+    private $rightSum     = 0;
+    /**
+     * @var int
+     */
+    private $pointerLeft  = 0;
+    /**
+     * @var int
+     */
+    private $pointerRight = 0;
 
     /**
      * @param array $matrix
@@ -15,20 +33,32 @@ class MatrixDifference
      */
     public function calculate(array $matrix) : int
     {
-        $leftSum = 0;
-        $rightSum = 0;
-        $pointerLeft = 0;
-        $totalRows = count($matrix);
-        $pointerRight = $totalRows- 1;
+        $this->pointerRight = count($matrix) - 1;
 
         foreach ($matrix as $row)
         {
-            $leftSum+= $row[$pointerLeft];
-            $pointerLeft++;
-            $rightSum+= $row[$pointerRight];
-            $pointerRight--;
+            $this->processRow($row);
         }
 
-        return  abs($leftSum - $rightSum);
+        return $this->calculateAbsolute();
+    }
+
+    /**
+     * @param $row
+     */
+    private function processRow($row)
+    {
+        $this->leftSum  += $row[$this->pointerLeft];
+        $this->pointerLeft++;
+        $this->rightSum += $row[$this->pointerRight];
+        $this->pointerRight--;
+    }
+
+    /**
+     * @return number
+     */
+    private function calculateAbsolute()
+    {
+        return abs($this->leftSum - $this->rightSum);
     }
 }
