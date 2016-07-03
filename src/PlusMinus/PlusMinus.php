@@ -7,9 +7,21 @@ namespace PlusMinus;
  */
 class PlusMinus
 {
+    /**
+     * @var int
+     */
     private $positiveNumbers = 0;
+    /**
+     * @var int
+     */
     private $zeroNumbers     = 0;
+    /**
+     * @var int
+     */
     private $negativeNumbers = 0;
+    /**
+     * @var int
+     */
     private $totalElements   = 0;
 
     /**
