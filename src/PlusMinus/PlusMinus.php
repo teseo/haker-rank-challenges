@@ -1,6 +1,10 @@
 <?php
 namespace PlusMinus;
 
+/**
+ * Class PlusMinus
+ * @package PlusMinus
+ */
 class PlusMinus
 {
     private $positiveNumbers = 0;
@@ -8,7 +12,11 @@ class PlusMinus
     private $negativeNumbers = 0;
     private $totalElements   = 0;
 
-    public function parse($inputArray)
+    /**
+     * @param $inputArray
+     * @return string
+     */
+    public function parse($inputArray) : string
     {
         $this->totalElements = count($inputArray);
 
@@ -33,7 +41,7 @@ class PlusMinus
     /**
      * @return string
      */
-    private function printOutput()
+    private function printOutput() : string
     {
         $result = '';
 
@@ -63,7 +71,7 @@ class PlusMinus
         {
             $result.= $this->pritEmptyDefaultValue();
         }
-        
+
         return  $result;
     }
 
@@ -71,7 +79,7 @@ class PlusMinus
      * @param $item
      * @return bool
      */
-    private function isPositive($item)
+    private function isPositive($item) : bool
     {
         return $item > 0;
     }
@@ -80,7 +88,7 @@ class PlusMinus
      * @param $item
      * @return bool
      */
-    private function isNegative($item)
+    private function isNegative($item) : bool
     {
         return $item < 0;
     }
@@ -88,7 +96,7 @@ class PlusMinus
     /**
      * @return string
      */
-    private function formatPositiveNumbers()
+    private function formatPositiveNumbers() : string
     {
         return number_format($this->positiveNumbers / $this->totalElements, 6);
     }
@@ -96,7 +104,7 @@ class PlusMinus
     /**
      * @return string
      */
-    private function pritEmptyDefaultValue()
+    private function pritEmptyDefaultValue() : string
     {
         return number_format(0, 6);
     }
