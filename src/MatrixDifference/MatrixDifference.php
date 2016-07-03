@@ -52,9 +52,9 @@ class MatrixDifference
     }
 
     /**
-     * @return number
+     * @return int
      */
-    private function calculateAbsolute()
+    private function calculateAbsolute() :int
     {
         return abs($this->leftSum - $this->rightSum);
     }
