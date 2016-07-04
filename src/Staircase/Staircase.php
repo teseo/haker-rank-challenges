@@ -31,7 +31,7 @@ class Staircase
      * @param int $i
      * @return string
      */
-    private function generateSpaces(int $steps, int $i)
+    private function generateSpaces(int $steps, int $i) : string
     {
         return str_repeat(" ", $steps - $i);
     }
@@ -40,7 +40,7 @@ class Staircase
      * @param int $i
      * @return string
      */
-    private function generateSteps(int $i)
+    private function generateSteps(int $i) : string
     {
         return str_repeat('#', $i);
     }
@@ -50,7 +50,7 @@ class Staircase
      * @param int $i
      * @return string
      */
-    private function generateEndOfStep(int $steps, int $i)
+    private function generateEndOfStep(int $steps, int $i) : string
     {
         return $steps == $i ? '' : PHP_EOL;
     }
