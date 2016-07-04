@@ -17,5 +17,8 @@
         <testsuite name="PlusMinus">
             <directory>tests/PlusMinusTest</directory>
         </testsuite>
+        <testsuite name="Staircase">
+            <directory>tests/StaircaseTest</directory>
+        </testsuite>
     </testsuites>
 </phpunit>

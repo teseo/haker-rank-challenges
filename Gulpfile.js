@@ -15,6 +15,10 @@ require('./gulp-tasks/watch-matrix-difference')(gulp);
 require('./gulp-tasks/plus-minus')(gulp, plugins);
 require('./gulp-tasks/watch-plus-minus')(gulp);
 
+//Staircase challenge tasks
+require('./gulp-tasks/staircase')(gulp, plugins);
+require('./gulp-tasks/watch-staircase')(gulp);
+
 gulp.task('matrix-difference', [
     'clear',
     'suite-matrix-difference',
@@ -25,5 +29,10 @@ gulp.task('plus-minus', [
     'suite-plus-minus',
     'watch-suite-plus-minus']);
 
+gulp.task('staircase', [
+    'clear',
+    'suite-staircase',
+    'watch-suite-staircase']);
+
 // default task: clear screen, run test suites
-gulp.task('default', ['matrix-difference', 'plus-minus']);
+gulp.task('default', ['matrix-difference', 'plus-minus', 'staircase']);
