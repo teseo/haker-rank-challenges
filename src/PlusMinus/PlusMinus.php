@@ -124,7 +124,7 @@ class PlusMinus
     /**
      * @return string
      */
-    private function formatNegativeNumbers()
+    private function formatNegativeNumbers() : string
     {
         return number_format($this->negativeNumbers / $this->totalElements, 6);
     }
@@ -132,7 +132,7 @@ class PlusMinus
     /**
      * @return string
      */
-    private function formatZeroNumbers()
+    private function formatZeroNumbers() : string
     {
         return number_format($this->zeroNumbers / $this->totalElements, 6);
     }
